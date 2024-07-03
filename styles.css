@@ -91,6 +91,15 @@ form button:hover {
     padding: 50px;
     background-color: #f0f0f0;
 }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio h1 {
+    margin-bottom: 30px;
+}
 
 .projects h2 {
     text-align: center;
