@@ -72,7 +72,7 @@ form button:hover {
 }
 
 .hero {
-    background-image: url('path/to/your-hero-image.jpg');
+    background-image: url('leadspace.png');
     background-size: cover;
     background-position: center;
     height: 400px; /* Adjust height as needed */
@@ -84,9 +84,19 @@ form button:hover {
 }
 
 .hero-content {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
 }
 
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
 .projects {
     padding: 50px;
     background-color: #f0f0f0;
@@ -97,38 +107,56 @@ form button:hover {
     text-align: center;
 }
 
-.portfolio h1 {
-    margin-bottom: 30px;
-}
-
-.projects h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .project-cards {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Allows cards to wrap onto new lines if necessary */
+    gap: 20px; /* Space between the cards */
+    justify-content: space-between; /* Spreads the cards evenly */
 }
 
 .project-card {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    justify-content: space-between; /* Even spacing between items */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 300px; /* Adjust card width as needed */
+    width: calc(30% - 40px); /* Three cards per row, adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Aligns all text to the center */
+    transition: transform 0.3s ease-in-out;
 }
 
-.project-card h3 {
+.project-card:hover {
+    transform: scale(1.05); /* Zooms in when hovered */
+}
+
+.project-card h2 {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .project-card p {
+    font-size: 1em;
     margin-bottom: 20px;
+    flex-grow: 1; /* Makes the description take up available space */
 }
 
+.project-card .btn {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center; /* Centers the button text */
+    transition: background-color 0.3s ease-in-out;
+    align-self: center; /* Aligns the button to the center */
+}
+
+.project-card .btn:hover {
+    background-color: #0056b3;
+}
 .btn {
     display: inline-block;
     padding: 10px 20px;
